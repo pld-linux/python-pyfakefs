@@ -1,13 +1,15 @@
+# NOTE: for versions >= 4 for python 3.5+ see python3-pyfakefs.spec
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-pyfakefs.spec)
 
 Summary:	Fake file system that mocks the Python 2 file system modules
 Summary(pl.UTF-8):	Fałszywy system plików będący atrapą modułów systemowych Pythona 2 dla plików
 Name:		python-pyfakefs
+# NOTE: keep 3.x for python2 support
 Version:	3.7.2
 Release:	1
 License:	Apache v2.0
